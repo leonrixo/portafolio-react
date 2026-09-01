@@ -36,9 +36,9 @@ const SocialInfo = () => {
     }}>
       <strong>Gustavo Rizo</strong>
       <span>|</span>
-      <a href="tel:+523312345678" style={{ color: '#4da6ff', textDecoration: 'none' }}>📞 Teléfono</a>
+      <a href="tel:+524776316384" style={{ color: '#4da6ff', textDecoration: 'none' }}>📞 +52 477 631 6384</a>
       <span>|</span>
-      <a href="https://linkedin.com/in/gustavorizo" target="_blank" rel="noreferrer" style={{ color: '#4da6ff', textDecoration: 'none' }}>LinkedIn</a>
+      <a href="https://linkedin.com/in/leonrixo" target="_blank" rel="noreferrer" style={{ color: '#4da6ff', textDecoration: 'none' }}>LinkedIn</a>
       <span>|</span>
       <a href="https://github.com/leonrixo" target="_blank" rel="noreferrer" style={{ color: '#4da6ff', textDecoration: 'none' }}>GitHub</a>
     </div>
