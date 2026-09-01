@@ -106,15 +106,33 @@ body {
 @media (max-width: 768px) {
   .split-screen-container {
     flex-direction: column;
+    height: auto; /* Permite que la página crezca según el contenido */
+    overflow-y: auto;
+  }
+  .split-side {
+    min-height: 40vh; /* Da altura mínima para que el contenido respire */
+    padding: 3rem 0; /* Espaciado arriba y abajo */
   }
   .split-side:hover {
     flex: 1; /* Desactiva el zoom de las columnas en móvil */
   }
   .glass-panel {
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     width: 85%;
+    margin: 1rem 0;
   }
   .split-side:hover .glass-panel {
     transform: none; /* Desactiva el flotado del panel en móvil */
+  }
+  
+  /* Ajustes sutiles de texto para pantallas pequeñas */
+  .glass-panel h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .glass-panel p {
+    font-size: 1rem;
+    margin-bottom: 1.8rem;
   }
 }
