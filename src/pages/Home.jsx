@@ -9,10 +9,11 @@ export default function Home() {
       {/* 1. Lado Izquierdo: Scrum Master / PM */}
       <div className="split-side agile-side">
         <div className="glass-panel">
+          <span className="badge-role">GESTIÓN</span>
           <h1>Scrum Master</h1>
           <p>Liderazgo de equipos, flujos de valor ágiles y automatización empresarial con IA.</p>
           <Link to="/agile" className="btn-explore">
-            Ver Experiencia
+            Ver Experiencia <span>→</span>
           </Link>
         </div>
       </div>
@@ -20,10 +21,11 @@ export default function Home() {
       {/* 2. Centro: Data Analyst */}
       <div className="split-side data-side">
         <div className="glass-panel">
+          <span className="badge-role">ANALÍTICA</span>
           <h1>Data Analyst</h1>
           <p>Calidad geoespacial, bases de datos SQL y Macros en Excel (Six Sigma).</p>
           <Link to="/data" className="btn-explore">
-            Ver Resultados
+            Ver Resultados <span>→</span>
           </Link>
         </div>
       </div>
@@ -31,10 +33,11 @@ export default function Home() {
       {/* 3. Lado Derecho: IT Support */}
       <div className="split-side support-side">
         <div className="glass-panel">
+          <span className="badge-role">INFRAESTRUCTURA</span>
           <h1>IT Support</h1>
           <p>Enterprise Service Desk (Jira/ServiceNow) y comunicación clínica bilingüe.</p>
           <Link to="/support" className="btn-explore">
-            Ver Habilidades
+            Ver Habilidades <span>→</span>
           </Link>
         </div>
       </div>

@@ -35,35 +35,55 @@ body {
   background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), 
                     url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000');
 }
+.agile-side .glass-panel { border-top: 3px solid #38bdf8; }
+.agile-side:hover .glass-panel { box-shadow: 0 12px 40px rgba(56, 189, 248, 0.25); }
 
 .data-side {
   background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), 
                     url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000');
 }
+.data-side .glass-panel { border-top: 3px solid #34d399; }
+.data-side:hover .glass-panel { box-shadow: 0 12px 40px rgba(52, 211, 153, 0.25); }
 
 .support-side {
   background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), 
                     url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=1000');
 }
+.support-side .glass-panel { border-top: 3px solid #818cf8; }
+.support-side:hover .glass-panel { box-shadow: 0 12px 40px rgba(129, 140, 248, 0.25); }
 
 /* ==================== GLASSMORPHISM (El Panel de Cristal) ==================== */
 .glass-panel {
   background: rgba(255, 255, 255, 0.08); /* Muy transparente */
   backdrop-filter: blur(12px); /* Desenfoca lo que está detrás */
   -webkit-backdrop-filter: blur(12px); /* Soporte para Safari */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil blanco */
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   padding: 2.5rem 1.5rem;
   width: 75%;
   max-width: 320px;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); /* Sombra pesada para crear volumen */
   color: white; /* El texto debe ser blanco puro */
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 /* El panel flota un poco cuando haces hover en la columna completa */
 .split-side:hover .glass-panel {
   transform: translateY(-8px);
+}
+
+.badge-role {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
 }
 
 .glass-panel h1 {
@@ -82,7 +102,10 @@ body {
 
 /* ==================== BOTONES ESTILO CRISTAL ==================== */
 .btn-explore {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   padding: 12px 28px;
   background-color: rgba(255, 255, 255, 0.15);
   color: white;
@@ -92,6 +115,11 @@ body {
   font-weight: bold;
   letter-spacing: 1px;
   transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.btn-explore span {
+  transition: transform 0.3s ease;
 }
 
 .btn-explore:hover {
@@ -99,6 +127,7 @@ body {
   color: #1a1a1a; /* Texto oscuro al pasar el ratón */
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+  gap: 12px;
 }
 
 /* ==================== RESPONSIVO (Teléfonos Móviles) ==================== */
@@ -109,9 +138,9 @@ body {
   }
   
   .split-side {
-    flex: 1; /* Cada sección toma exactamente 1/3 de la pantalla (33.33vh) */
-    min-height: auto;
-    padding: 0;
+    flex: 1; /* Cada sección toma exactamente 1/3 de la pantalla o ajusta */
+    min-height: 240px; /* Altura natural con texto visible */
+    padding: 1.5rem 0;
   }
   
   .split-side:hover {
@@ -119,27 +148,30 @@ body {
   }
   
   .glass-panel {
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     width: 85%;
     max-width: none;
     margin: 0;
-    /* Reducimos la sombra para que se vea más como un botón/banner limpio */
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     transform: none !important; /* Desactiva animaciones de flotado */
   }
   
   .glass-panel h1 {
     font-size: 1.5rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
   }
   
-  /* OCULTAMOS EL PÁRRAFO EN MÓVILES PARA EVITAR SATURACIÓN VISUAL Y AHORRAR ESPACIO */
+  /* Reactivamos el párrafo en móviles para mantener keywords */
   .glass-panel p {
-    display: none;
+    display: block;
+    font-size: 0.85rem;
+    line-height: 1.35;
+    margin-bottom: 1rem;
+    opacity: 0.9;
   }
   
   .btn-explore {
-    padding: 10px 24px;
+    padding: 8px 20px;
     font-size: 0.9rem;
   }
 }
