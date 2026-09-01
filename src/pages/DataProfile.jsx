@@ -12,9 +12,9 @@ export default function DataProfile() {
       <header className="data-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '15px', borderBottom: '2px solid #555', paddingBottom: '1rem', marginBottom: '2rem' }}>
         <h1 style={{ color: 'var(--text-main)', margin: 0 }}>Data Analyst</h1>
         <div style={{ display: 'flex', gap: '10px' }}>
-          <button onClick={() => window.print()} style={{ padding: '10px 20px', backgroundColor: '#34d399', color: '#111827', border: 'none', borderRadius: '5px', fontWeight: 'bold', cursor: 'pointer' }}>
-            📄 Imprimir / PDF
-          </button>
+          <Link to="/cv" style={{ padding: '10px 20px', backgroundColor: '#34d399', color: '#111827', textDecoration: 'none', borderRadius: '5px', fontWeight: 'bold' }}>
+            📄 Ver CV Completo
+          </Link>
           <a href="mailto:leonrixo@gmail.com" style={{ padding: '10px 20px', backgroundColor: '#2980b9', color: 'white', textDecoration: 'none', borderRadius: '5px', fontWeight: 'bold' }}>
             ✉️ Contactar
           </a>

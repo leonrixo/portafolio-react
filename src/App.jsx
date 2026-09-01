@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import AgileProfile from './pages/AgileProfile';
 import DataProfile from './pages/DataProfile';
 import SupportProfile from './pages/SupportProfile';
+import FullCV from './pages/FullCV';
 import { useTheme } from './hooks/ThemeProvider';
 import ChatWidget from './components/common/ChatWidget';
 
@@ -74,6 +75,7 @@ function App() {
             <Route path="/agile" element={<AgileProfile />} />
             <Route path="/data" element={<DataProfile />} />
             <Route path="/support" element={<SupportProfile />} />
+            <Route path="/cv" element={<FullCV />} />
           </Routes>
         </div>
         <GlobalFooter />

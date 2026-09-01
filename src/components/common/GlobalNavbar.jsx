@@ -7,9 +7,6 @@ export default function GlobalNavbar() {
   const location = useLocation();
   const isHome = location.pathname === '/';
 
-  // Desaparecer completamente la barra de navegación en la página principal
-  if (isHome) return null;
-
   const navLinkStyle = ({ isActive }) => ({
     padding: '8px 16px',
     borderRadius: '20px',
@@ -46,6 +43,9 @@ export default function GlobalNavbar() {
         </NavLink>
         <NavLink to="/support" style={({ isActive }) => ({ ...navLinkStyle({ isActive }), backgroundColor: isActive ? '#818cf8' : 'transparent' })}>
           🛠️ Support
+        </NavLink>
+        <NavLink to="/cv" style={({ isActive }) => ({ ...navLinkStyle({ isActive }), backgroundColor: isActive ? '#f59e0b' : 'transparent' })}>
+          📄 CV
         </NavLink>
       </div>
 

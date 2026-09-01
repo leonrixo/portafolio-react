@@ -11,9 +11,9 @@ export default function SupportProfile() {
       <header className="support-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '15px', borderBottom: '2px solid #555', paddingBottom: '1rem', marginBottom: '2rem' }}>
         <h1 style={{ color: 'var(--text-main)', margin: 0 }}>IT Support & Intérprete</h1>
         <div style={{ display: 'flex', gap: '10px' }}>
-          <button onClick={() => window.print()} style={{ padding: '10px 20px', backgroundColor: '#818cf8', color: '#111827', border: 'none', borderRadius: '5px', fontWeight: 'bold', cursor: 'pointer' }}>
-            📄 Imprimir / PDF
-          </button>
+          <Link to="/cv" style={{ padding: '10px 20px', backgroundColor: '#818cf8', color: '#111827', textDecoration: 'none', borderRadius: '5px', fontWeight: 'bold' }}>
+            📄 Ver CV Completo
+          </Link>
           <a href="mailto:leonrixo@gmail.com" style={{ padding: '10px 20px', backgroundColor: '#16a085', color: 'white', textDecoration: 'none', borderRadius: '5px', fontWeight: 'bold' }}>
             ✉️ Contactar
           </a>
