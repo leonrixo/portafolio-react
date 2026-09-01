@@ -1,0 +1,172 @@
+.chat-widget-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+}
+
+/* Botón flotante */
+.chat-toggle-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #8e44ad; /* Morado "Inteligencia Artificial" */
+  color: white;
+  font-size: 1.8rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.chat-toggle-btn:hover {
+  transform: scale(1.1);
+  background-color: #9b59b6;
+}
+
+.chat-toggle-btn.hidden {
+  display: none;
+}
+
+/* Ventana del Chat */
+.chat-window {
+  width: 350px;
+  height: 450px;
+  background-color: var(--bg-main);
+  border: 1px solid #555;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  overflow: hidden;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Encabezado */
+.chat-header {
+  background-color: #8e44ad;
+  color: white;
+  padding: 12px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Área de mensajes */
+.chat-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: rgba(0,0,0,0.03);
+}
+
+body.dark-mode .chat-messages {
+  background-color: rgba(255,255,255,0.02);
+}
+
+/* Burbujas de texto */
+.chat-bubble {
+  padding: 10px 14px;
+  border-radius: 18px;
+  max-width: 80%;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.chat-bubble.user {
+  background-color: #2980b9;
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.chat-bubble.bot {
+  background-color: #e0e0e0;
+  color: #222;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+body.dark-mode .chat-bubble.bot {
+  background-color: #333;
+  color: #fff;
+}
+
+.chat-bubble.typing {
+  font-style: italic;
+  opacity: 0.7;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+/* Área de Input */
+.chat-input-area {
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding: 12px;
+  background-color: var(--bg-main);
+}
+
+body.dark-mode .chat-input-area {
+  border-top-color: #444;
+}
+
+.chat-input-area input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+.chat-input-area button {
+  background-color: #8e44ad;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-left: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.chat-input-area button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+body.dark-mode .chat-input-area button:disabled {
+  background-color: #555;
+}
+

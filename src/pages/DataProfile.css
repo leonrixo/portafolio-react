@@ -1,0 +1,96 @@
+/* Estilos para el CV Interactivo de DataProfile */
+.data-header {
+  border-bottom: 2px solid #2980b9;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body.dark-mode .data-header {
+  border-bottom-color: #3498db;
+}
+
+/* Lista de Impacto (Logros) */
+.impact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.impact-item {
+  background-color: var(--bg-main);
+  border-left: 5px solid #2980b9;
+  padding: 1.5rem;
+  border-radius: 4px;
+  box-shadow: var(--shadow-base);
+  color: var(--text-main);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .impact-item {
+  background-color: #1a1a1a;
+  border-left-color: #3498db;
+}
+
+.impact-item:hover {
+  transform: translateX(8px);
+  box-shadow: var(--shadow-hover), 0 0 20px var(--accent-glow);
+}
+
+.impact-item h3 {
+  margin-top: 0;
+  color: #2980b9;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+body.dark-mode .impact-item h3 { 
+  color: #3498db; 
+}
+
+.impact-item p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+}
+
+/* Etiquetas de Datos */
+.data-badge {
+  background-color: rgba(41, 128, 185, 0.1);
+  color: #2980b9;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-right: 10px;
+  display: inline-block;
+  border: 1px solid #2980b9;
+}
+
+body.dark-mode .data-badge {
+  color: #3498db;
+  background-color: rgba(52, 152, 219, 0.1);
+  border-color: #3498db;
+}
+
+/* Certificaciones Teóricas */
+.cert-list {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.cert-item {
+  background-color: #e67e22; /* Color naranja distintivo */
+  color: white;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+

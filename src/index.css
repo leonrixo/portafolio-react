@@ -1,0 +1,37 @@
+/* Importación directa desde Google Fonts: Tipografía Poppins (Moderna y geométrica) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Variables Globales de Tema y Micro-interacciones */
+:root {
+  /* Colores */
+  --bg-main: #ffffff;
+  --text-main: #333333;
+  --accent-glow: rgba(41, 128, 185, 0.25); /* Color del brillo al hacer hover */
+
+  /* Tipografía global */
+  --font-main: 'Poppins', system-ui, sans-serif;
+
+  /* Sombras dinámicas (Box Shadow) */
+  --shadow-base: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sombra en reposo */
+  --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.15); /* Sombra elevada */
+}
+
+body.dark-mode {
+  --bg-main: #121212;
+  --text-main: #f5f5f5;
+  --accent-glow: rgba(52, 152, 219, 0.15); /* Brillo adaptado al fondo negro */
+  --shadow-base: 0 4px 10px rgba(0, 0, 0, 0.4);
+  --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.8);
+}
+
+body.light-mode {
+  --bg-main: #ffffff;
+  --text-main: #333333;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-main); /* Aplicamos la fuente Poppins globalmente */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

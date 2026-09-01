@@ -1,0 +1,121 @@
+/* Estilos para el CV Interactivo de SupportProfile */
+.support-header {
+  border-bottom: 2px solid #16a085; /* Verde Esmeralda */
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body.dark-mode .support-header {
+  border-bottom-color: #1abc9c;
+}
+
+/* Tarjeta de Experiencia Principal */
+.experience-card {
+  background-color: var(--bg-main);
+  border-left: 5px solid #16a085;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: var(--shadow-base);
+  margin-bottom: 3rem;
+  color: var(--text-main);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .experience-card {
+  background-color: #1a1a1a;
+  border-left-color: #1abc9c;
+}
+
+.experience-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover), 0 0 20px var(--accent-glow);
+}
+
+.experience-card h3 {
+  margin: 0 0 5px 0;
+  color: #16a085;
+  font-size: 1.4rem;
+}
+
+body.dark-mode .experience-card h3 { 
+  color: #1abc9c; 
+}
+
+/* Matriz de Habilidades (Grid a 2 Columnas) */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.skill-box {
+  background-color: var(--bg-main);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-base);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-box:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover), 0 0 20px var(--accent-glow);
+}
+
+body.dark-mode .skill-box {
+  border-color: #444;
+  background-color: #1a1a1a;
+}
+
+.skill-box h3 {
+  margin-top: 0;
+  color: #2c3e50;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+body.dark-mode .skill-box h3 {
+  color: #f5f5f5;
+  border-bottom-color: #333;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--text-main);
+}
+
+.skill-list li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.5;
+  font-size: 1.05rem;
+}
+
+.skill-icon {
+  color: #16a085;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: -2px; /* Alineación óptica con el texto */
+}
+
+body.dark-mode .skill-icon {
+  color: #1abc9c;
+}
+
