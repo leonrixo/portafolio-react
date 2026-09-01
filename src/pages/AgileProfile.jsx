@@ -67,6 +67,26 @@ export default function AgileProfile() {
           </div>
         </section>
 
+        {/* ================= HERRAMIENTAS DE GESTIÓN ================= */}
+        <section className="resume-section">
+          <h2 className="resume-title">Herramientas de Gestión Ágil</h2>
+          <div className="card-grid">
+            <div className="resume-card">
+              <h3>Stack Tecnológico & Reporteo</h3>
+              <span className="timeline-date">Uso Diario Avanzado</span>
+              <ul>
+                <li><strong>Jira & Confluence:</strong> Configuración de flujos de trabajo, tableros Kanban/Scrum, seguimiento de épicas e historias de usuario.</li>
+                <li><strong>Power BI & Excel:</strong> Extracción de métricas ágiles, creación de dashboards de velocidad (velocity) y reportes de burndown/burnup para stakeholders.</li>
+              </ul>
+              <div>
+                <span className="badge badge-scrum">Jira</span>
+                <span className="badge badge-scrum">Confluence</span>
+                <span className="badge badge-scrum">Power BI</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ================= EXPERIENCIA IA ================= */}
         <section className="resume-section">
           <h2 className="resume-title">Automatización con IA en Negocios</h2>

@@ -33,6 +33,37 @@ export default function SupportProfile() {
               <li>Creación de documentación técnica y troubleshooting para plataformas educativas propietarias.</li>
             </ul>
           </div>
+
+          <div className="experience-card" style={{ marginTop: '2rem' }}>
+            <h3>Medical & Legal Interpreter (Level 4/5)</h3>
+            <strong style={{ color: '#7f8c8d', display: 'block', marginBottom: '15px', fontSize: '1rem' }}>
+              Propio | Dic 2025 - Presente
+            </strong>
+            <ul style={{ paddingLeft: '20px', margin: 0, lineHeight: '1.7', fontSize: '1.05rem' }}>
+              <li>Interpretación remota Inglés-Español a Nivel 4/5 de competencia para escenarios médicos y legales.</li>
+              <li>Cumplimiento estricto de estándares de confidencialidad y normativas HIPAA para llamadas de atención médica.</li>
+            </ul>
+          </div>
+
+          <div className="experience-card" style={{ marginTop: '2rem' }}>
+            <h3>VRI Interpreter (Temporary Assignment)</h3>
+            <strong style={{ color: '#7f8c8d', display: 'block', marginBottom: '15px', fontSize: '1rem' }}>
+              AMN Healthcare | Jun 2026 - Ago 2026
+            </strong>
+            <ul style={{ paddingLeft: '20px', margin: 0, lineHeight: '1.7', fontSize: '1.05rem' }}>
+              <li>Provisión de servicios de Interpretación Remota por Video (VRI) de alto rendimiento bajo contrato a corto plazo.</li>
+            </ul>
+          </div>
+
+          <div className="experience-card" style={{ marginTop: '2rem' }}>
+            <h3>Medical Interpreter</h3>
+            <strong style={{ color: '#7f8c8d', display: 'block', marginBottom: '15px', fontSize: '1rem' }}>
+              Kelly Services Mexico (Language Line) | Dic 2023 - Dic 2025
+            </strong>
+            <ul style={{ paddingLeft: '20px', margin: 0, lineHeight: '1.7', fontSize: '1.05rem' }}>
+              <li>Interpretación médica precisa y fluida (Inglés/Español) en entornos clínicos y de seguros de salud.</li>
+            </ul>
+          </div>
         </section>
 
         {/* ================= MATRIZ DE HABILIDADES (2 Columnas) ================= */}
