@@ -24,10 +24,32 @@ const ThemeToggleButton = () => {
   );
 };
 
+// Componente global: Info de contacto básica
+const SocialInfo = () => {
+  return (
+    <div style={{
+      position: 'absolute', bottom: '20px', left: '50%', transform: 'translateX(-50%)',
+      zIndex: 1000, display: 'flex', gap: '15px', padding: '10px 20px',
+      background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(10px)',
+      borderRadius: '30px', border: '1px solid rgba(255,255,255,0.2)',
+      color: 'white', fontSize: '0.9rem', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center'
+    }}>
+      <strong>Gustavo Rizo</strong>
+      <span>|</span>
+      <a href="tel:+523312345678" style={{ color: '#4da6ff', textDecoration: 'none' }}>📞 Teléfono</a>
+      <span>|</span>
+      <a href="https://linkedin.com/in/gustavorizo" target="_blank" rel="noreferrer" style={{ color: '#4da6ff', textDecoration: 'none' }}>LinkedIn</a>
+      <span>|</span>
+      <a href="https://github.com/leonrixo" target="_blank" rel="noreferrer" style={{ color: '#4da6ff', textDecoration: 'none' }}>GitHub</a>
+    </div>
+  );
+};
+
 function App() {
   return (
     <BrowserRouter>
       <ThemeToggleButton />
+      <SocialInfo />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/agile" element={<AgileProfile />} />
