@@ -106,33 +106,42 @@ body {
 @media (max-width: 768px) {
   .split-screen-container {
     flex-direction: column;
-    height: auto; /* Permite que la página crezca según el contenido */
-    overflow-y: auto;
+    height: 100vh; /* Restricción estricta a 100vh, sin scroll */
+    overflow: hidden;
   }
+  
   .split-side {
-    min-height: 40vh; /* Da altura mínima para que el contenido respire */
-    padding: 3rem 0; /* Espaciado arriba y abajo */
+    flex: 1; /* Cada sección toma exactamente 1/3 de la pantalla (33.33vh) */
+    min-height: auto;
+    padding: 0;
   }
+  
   .split-side:hover {
     flex: 1; /* Desactiva el zoom de las columnas en móvil */
   }
+  
   .glass-panel {
-    padding: 2rem 1.5rem;
+    padding: 1rem;
     width: 85%;
-    margin: 1rem 0;
-  }
-  .split-side:hover .glass-panel {
-    transform: none; /* Desactiva el flotado del panel en móvil */
+    max-width: none;
+    margin: 0;
+    /* Reducimos la sombra para que se vea más como un botón/banner limpio */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transform: none !important; /* Desactiva animaciones de flotado */
   }
   
-  /* Ajustes sutiles de texto para pantallas pequeñas */
   .glass-panel h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 0.8rem;
   }
   
+  /* OCULTAMOS EL PÁRRAFO EN MÓVILES PARA EVITAR SATURACIÓN VISUAL Y AHORRAR ESPACIO */
   .glass-panel p {
-    font-size: 1rem;
-    margin-bottom: 1.8rem;
+    display: none;
+  }
+  
+  .btn-explore {
+    padding: 10px 24px;
+    font-size: 0.9rem;
   }
 }
