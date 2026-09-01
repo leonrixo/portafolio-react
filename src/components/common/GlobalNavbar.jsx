@@ -7,6 +7,9 @@ export default function GlobalNavbar() {
   const location = useLocation();
   const isHome = location.pathname === '/';
 
+  // Desaparecer completamente la barra de navegación en la página principal
+  if (isHome) return null;
+
   const navLinkStyle = ({ isActive }) => ({
     padding: '8px 16px',
     borderRadius: '20px',
