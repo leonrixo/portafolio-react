@@ -24,24 +24,46 @@ const ThemeToggleButton = () => {
   );
 };
 
-// Componente global: Info de contacto básica
-const SocialInfo = () => {
+// Componente global: Footer de Contacto (Sección Completa)
+const GlobalFooter = () => {
   return (
-    <div style={{
-      position: 'absolute', bottom: '20px', left: '50%', transform: 'translateX(-50%)',
-      zIndex: 1000, display: 'flex', gap: '15px', padding: '10px 20px',
-      background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(10px)',
-      borderRadius: '30px', border: '1px solid rgba(255,255,255,0.2)',
-      color: 'white', fontSize: '0.9rem', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center'
+    <footer style={{
+      backgroundColor: '#111827', // Un azul/gris oscuro elegante
+      color: 'white',
+      padding: '3rem 2rem',
+      textAlign: 'center',
+      borderTop: '2px solid #1f2937',
+      fontFamily: 'sans-serif'
     }}>
-      <strong>Gustavo Rizo</strong>
-      <span>|</span>
-      <a href="tel:+524776316384" style={{ color: '#4da6ff', textDecoration: 'none' }}>📞 +52 477 631 6384</a>
-      <span>|</span>
-      <a href="https://linkedin.com/in/leonrixo" target="_blank" rel="noreferrer" style={{ color: '#4da6ff', textDecoration: 'none' }}>LinkedIn</a>
-      <span>|</span>
-      <a href="https://github.com/leonrixo" target="_blank" rel="noreferrer" style={{ color: '#4da6ff', textDecoration: 'none' }}>GitHub</a>
-    </div>
+      <h2 style={{ margin: '0 0 1.5rem 0', fontSize: '1.8rem', letterSpacing: '1px' }}>Gustavo Rizo</h2>
+      <p style={{ color: '#9ca3af', marginBottom: '2rem', fontSize: '1.1rem' }}>
+        Desarrollo de Soluciones Ágiles | Análisis de Datos | IT Support
+      </p>
+      
+      <div style={{
+        display: 'flex', 
+        gap: '20px', 
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        flexWrap: 'wrap',
+        fontSize: '1.1rem'
+      }}>
+        <a href="tel:+524776316384" style={{ 
+          background: 'rgba(77, 166, 255, 0.1)', border: '1px solid #4da6ff', color: '#4da6ff', 
+          padding: '10px 20px', borderRadius: '30px', textDecoration: 'none', transition: 'all 0.3s' 
+        }}>📞 +52 477 631 6384</a>
+        
+        <a href="https://linkedin.com/in/leonrixo" target="_blank" rel="noreferrer" style={{ 
+          background: 'rgba(77, 166, 255, 0.1)', border: '1px solid #4da6ff', color: '#4da6ff', 
+          padding: '10px 20px', borderRadius: '30px', textDecoration: 'none', transition: 'all 0.3s' 
+        }}>🌐 LinkedIn</a>
+        
+        <a href="https://github.com/leonrixo" target="_blank" rel="noreferrer" style={{ 
+          background: 'rgba(77, 166, 255, 0.1)', border: '1px solid #4da6ff', color: '#4da6ff', 
+          padding: '10px 20px', borderRadius: '30px', textDecoration: 'none', transition: 'all 0.3s' 
+        }}>💻 GitHub</a>
+      </div>
+    </footer>
   );
 };
 
@@ -49,13 +71,18 @@ function App() {
   return (
     <BrowserRouter>
       <ThemeToggleButton />
-      <SocialInfo />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/agile" element={<AgileProfile />} />
-        <Route path="/data" element={<DataProfile />} />
-        <Route path="/support" element={<SupportProfile />} />
-      </Routes>
+      
+      <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+        <div style={{ flex: 1 }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/agile" element={<AgileProfile />} />
+            <Route path="/data" element={<DataProfile />} />
+            <Route path="/support" element={<SupportProfile />} />
+          </Routes>
+        </div>
+        <GlobalFooter />
+      </div>
       
       {/* Widget Global: Aparecerá en todas las rutas */}
       <ChatWidget />
