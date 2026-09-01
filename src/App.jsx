@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import AgileProfile from './pages/AgileProfile';
 import DataProfile from './pages/DataProfile';
@@ -8,6 +8,15 @@ import { useTheme } from './hooks/ThemeProvider';
 import ChatWidget from './components/common/ChatWidget';
 
 import GlobalNavbar from './components/common/GlobalNavbar';
+
+// Fix de UX: Hacer scroll hacia arriba siempre que se cambia de ruta
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
 
 // Componente global: Footer de Contacto (Sección Completa)
 const GlobalFooter = () => {
@@ -55,6 +64,7 @@ const GlobalFooter = () => {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <GlobalNavbar />
       
       <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>

@@ -1,9 +1,11 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { useTheme } from '../../hooks/ThemeProvider';
 
 export default function GlobalNavbar() {
   const { theme, toggleTheme } = useTheme();
+  const location = useLocation();
+  const isHome = location.pathname === '/';
 
   const navLinkStyle = ({ isActive }) => ({
     padding: '8px 16px',
@@ -44,15 +46,17 @@ export default function GlobalNavbar() {
         </NavLink>
       </div>
 
-      <button 
-        onClick={toggleTheme} 
-        style={{
-          padding: '8px 15px', cursor: 'pointer', borderRadius: '20px',
-          border: 'none', backgroundColor: theme === 'light' ? '#333' : '#f5f5f5',
-          color: theme === 'light' ? '#fff' : '#333', fontWeight: 'bold'
-        }}>
-        {theme === 'light' ? '🌙' : '☀️'}
-      </button>
+      {!isHome && (
+        <button 
+          onClick={toggleTheme} 
+          style={{
+            padding: '8px 15px', cursor: 'pointer', borderRadius: '20px',
+            border: 'none', backgroundColor: theme === 'light' ? '#333' : '#f5f5f5',
+            color: theme === 'light' ? '#fff' : '#333', fontWeight: 'bold'
+          }}>
+          {theme === 'light' ? '🌙' : '☀️'}
+        </button>
+      )}
     </nav>
   );
 }
